@@ -27,4 +27,13 @@
       ],
     },
   },
+  "plugins": [
+    {
+      "name": "typescript-styled-plugin",
+      "tags": [
+        "styled",
+        "css", /*and others that you like it!*/
+      ]
+    }
+  ],
 }
