@@ -26,6 +26,10 @@
       "@utils/*":[
         "./src/utils/*"
       ],
+      "@contexts/*":[
+        "./src/contexts/*"
+      ],
+
     },
   },
   "plugins": [

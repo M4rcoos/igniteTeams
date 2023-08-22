@@ -7,7 +7,7 @@ type navigate = {
 };
 export const Container = styled.View`
   width: 100%;
-  padding-top: 140px;
+  padding-top: 14px;
   flex-direction: row;
   align-items: center;
   justify-content: center;

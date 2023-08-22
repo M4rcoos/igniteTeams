@@ -28,7 +28,7 @@ export const UserProvider = ({ children }: UserContexProps) => {
     const newUser: User = { id: String(users.length + 1), name };
     setUsers([...users, newUser]);
   };
-
+  console.log("Todos os usuarios>>>", users);
   const generateTeams = (teamSize: string) => {
     const parsedTeamSize = parseInt(teamSize, 10);
     if (parsedTeamSize <= 0) {

@@ -16,18 +16,5 @@ export function Input({ ...rest }: TextInputProps) {
   const [teamSize, setTeamSize] = useState("");
   const [teams, setTeams] = useState<string[][]>([]);
 
-  console.log(users);
-
-  const handleAddUser = (name: string) => {
-    const newUser: User = { id: String(users.length + 1), name };
-    setUsers([...users, newUser]);
-  };
-
-  return (
-    <Container
-      placeholderTextColor={COLORS.GRAY_300}
-      {...rest}
-      onChangeText={() => setUsers}
-    />
-  );
+  return <Container placeholderTextColor={COLORS.GRAY_300} {...rest} />;
 }

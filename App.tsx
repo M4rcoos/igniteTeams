@@ -8,9 +8,10 @@ import {
   Roboto_700Bold,
 } from "@expo-google-fonts/roboto";
 
+import { UserProvider } from "@contexts/UserContext";
+
 import theme from "@theme/index";
 
-import { Players } from "@screens/Players";
 import { NavigationContainer } from "@react-navigation/native";
 
 export default function App() {
@@ -18,14 +19,16 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <ThemeProvider theme={theme}>
-        <StatusBar
-          barStyle="light-content"
-          translucent
-          backgroundColor="transparent"
-        />
-        {fontsLoaded ? <AppRoutes /> : <Loading />}
-      </ThemeProvider>
+      <UserProvider>
+        <ThemeProvider theme={theme}>
+          <StatusBar
+            barStyle="light-content"
+            translucent
+            backgroundColor="transparent"
+          />
+          {fontsLoaded ? <AppRoutes /> : <Loading />}
+        </ThemeProvider>
+      </UserProvider>
     </NavigationContainer>
   );
 }
